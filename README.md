@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Curd app with React + TypeScript + Vite + Redux-toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple CRUD (Create, Read, Update, Delete) application built using React. It allows users to perform CRUD operations on a list of items fetched from an API  https://jsonplaceholder.typicode.com/posts. Redux Toolkit is used for state management, and pagination is implemented for better user experience. React-router-dom is used for navigation between differnt pages. 
 
-Currently, two official plugins are available:
+# Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this project locally, follow these steps:
 
-## Expanding the ESLint configuration
+* clone the repo  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
+https://github.com/Danish-khan93/curdApp.git
+```
+* install the project
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+npm install
+```
+* Run the project
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Features
+
+* Create new items
+* Read existing items
+* Update existing items
+* Delete items
+
+
+
+
+
