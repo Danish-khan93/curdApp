@@ -19,5 +19,6 @@ export type POSTTYPE = {
 
 export type POSTDATATYPE ={
     title:string,
-    body:string
+    body:string,
+    
 }

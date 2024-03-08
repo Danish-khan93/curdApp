@@ -6,13 +6,13 @@ export const postsFetch = createAsyncThunk(
   "posts/postsFetch",
   async (pagination: PAGINATIONTYPE, { rejectWithValue }) => {
     try {
-        console.log("pagination",pagination);
-        
+      console.log("pagination", pagination);
+
       const response = await axios.get(
         `https://jsonplaceholder.typicode.com/posts?_start=${pagination.skip}&_limit=${pagination.limit}`
       );
       console.log(response.data);
-      return response.data
+      return response.data;
     } catch (error) {
       console.log(error);
       return rejectWithValue(error);
@@ -29,14 +29,35 @@ const initialState: INITIALSTATE = {
 const postSlice = createSlice({
   name: "posts",
   initialState,
-  reducers: {},
+  reducers: {
+    addPost:(state,action)=>{
+      
+    }
+    deletePost: (state, action) => {
+      state.post = state.post.filter((value) => value.id !== action.payload);
+    },
+
+    updatePost: (state, action) => {
+      const { id, title, body } = action.payload;
+      state.post = state.post.map((value) => {
+        if (value.id === id) {
+          return {
+            ...value,
+            title: title,
+            body: body,
+          };
+        }
+        return value;
+      });
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(postsFetch.pending, (state) => {
       state.isLoading = true;
     });
-    builder.addCase(postsFetch.fulfilled, (state,{payload}) => {
+    builder.addCase(postsFetch.fulfilled, (state, { payload }) => {
       state.isLoading = false;
-      state.post =[...state.post,...payload]
+      state.post = [...state.post, ...payload];
     });
     builder.addCase(postsFetch.rejected, (state) => {
       state.isError = "is error";
@@ -45,3 +66,4 @@ const postSlice = createSlice({
 });
 
 export default postSlice.reducer;
+export const { deletePost, updatePost } = postSlice.actions;
