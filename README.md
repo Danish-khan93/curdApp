@@ -16,10 +16,10 @@ npm install
 
 # Features
 
-Create new items
-Read existing items
-Update existing items
-Delete items
+* Create new items
+* Read existing items
+* Update existing items
+* Delete items
 
 
 
