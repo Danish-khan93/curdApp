@@ -9,7 +9,12 @@ To run this project locally, follow these steps:
 * clone the repo  
 
 ```bash
-https://github.com/Danish-khan93/curdApp.git
+git clone https://github.com/Danish-khan93/curdApp.git
+```
+* Navigate into the project directory:  
+
+```bash
+cd crudApp
 ```
 * install the project
 
