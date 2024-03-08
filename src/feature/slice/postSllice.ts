@@ -31,8 +31,10 @@ const postSlice = createSlice({
   initialState,
   reducers: {
     addPost:(state,action)=>{
-      
-    }
+        console.log(action.payload);
+        
+      state.post= [action.payload,...state.post]
+    },
     deletePost: (state, action) => {
       state.post = state.post.filter((value) => value.id !== action.payload);
     },
@@ -66,4 +68,4 @@ const postSlice = createSlice({
 });
 
 export default postSlice.reducer;
-export const { deletePost, updatePost } = postSlice.actions;
+export const { deletePost, updatePost ,addPost} = postSlice.actions;
