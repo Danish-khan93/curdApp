@@ -1,6 +1,20 @@
-# React + TypeScript + Vite
+# Curd app with React + TypeScript + Vite + Redux-toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple CRUD (Create, Read, Update, Delete) application built using React. It allows users to perform CRUD operations on a list of items.
+
+# Installation
+
+To run this project locally, follow these steps:
+
+```bash
+https://github.com/Danish-khan93/curdApp.git
+```
+
+```bash
+npm install
+```
+
+
 
 Currently, two official plugins are available:
 
