@@ -6,9 +6,12 @@ This is a simple CRUD (Create, Read, Update, Delete) application built using Rea
 
 To run this project locally, follow these steps:
 
+* clone the repo  
+
 ```bash
 https://github.com/Danish-khan93/curdApp.git
 ```
+* install the project
 
 ```bash
 npm install
