@@ -16,6 +16,11 @@ https://github.com/Danish-khan93/curdApp.git
 ```bash
 npm install
 ```
+* Run the project
+
+```bash
+npm run dev
+```
 
 # Features
 
